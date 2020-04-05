@@ -11,5 +11,9 @@
 -http://localhost:8080 de proje çalışmaya başlamış olacaktır.
 -**Admin Paneli için** http://localhost:8080/admin
 
+- **NOT** -
+- `Unhandled exception : Drive has not been shared`
+Hatası alırsanız Docker > Settings > Resources > File Sharing > (Docker ' in kurulu olduğu dizini aktif edin.)
+
 - **vue** - `:8080`
 - **laravel api** - `:8000`
