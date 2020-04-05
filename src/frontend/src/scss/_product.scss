@@ -1,0 +1,189 @@
+.product-card{
+    margin-top: $margin-top;
+    display: flex;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $margin-top;
+
+
+    @media(max-width: $breakpoint-tablet){
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    &-img{
+        height: 622px;
+        width: 415px;
+        overflow: hidden;
+
+        img{
+        @media(max-width: $breakpoint-tablet){
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    }
+
+    &-description{
+        margin-left: $margin-left-card;
+        border: solid 1px $color-soft-gray;
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 40px;
+        align-content: flex-start;
+        height: 350px;
+        width: 491px;
+
+
+        @media(max-width: $breakpoint-tablet){
+            width: 80%;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        &-brand , &-name , &-price{
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+        }
+
+        &-brand{
+            margin-top: 40px;
+            font-size: 24px;
+            margin-bottom: 10px;
+
+        }
+
+        &-name{
+            font-size: 16px;
+            color: $color-gray;
+            margin-bottom: 10px;
+
+        }
+
+        &-price{
+            font-size: $font-size-info;
+            margin-top: 50px;
+            color: $color-orange;
+            font-weight: bold;
+            }
+
+        &-add{
+            width: 80%;
+        }
+
+        }
+
+    }
+    .addedToCart{
+        color: #46af62;
+        width : 100%;
+        max-width: 100%;
+        height: 28px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+
+        .success{
+            transition: all 1s ease;
+            display: flex;
+            span{
+                font-size: $font-size-button;
+                line-height: 70px;
+                text-align: center;
+            }
+        }
+
+
+
+$circle-length: 151px;
+$check-length: 36px;
+
+
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: $circle-length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: $check-length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#successAnimationCircle {
+  stroke-dasharray: $circle-length $circle-length;
+  stroke: #46af62;
+}
+
+#successAnimationCheck {
+  stroke-dasharray: $check-length $check-length;
+  stroke: #46af62;
+}
+
+#successAnimationResult {
+  fill: #46af62;
+  opacity: 0;
+}
+
+#successAnimation.animated {
+  animation: 1s ease-out 0s 1 both scaleAnimation;
+  #successAnimationCircle {
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+               0.3s linear 0.9s 1 both fadeOut;
+  }
+
+  #successAnimationCheck {
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+               0.3s linear 0.9s 1 both fadeOut;
+  }
+
+  #successAnimationResult {
+    animation: 0.3s linear 0.9s both fadeIn;
+  }
+}
+

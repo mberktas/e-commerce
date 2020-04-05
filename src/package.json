@@ -1,0 +1,7 @@
+{
+    "scripts": {
+      "serve": "cd frontend && npm run serve",
+      "build": "cd frontend && npm run build"
+
+    }
+  }

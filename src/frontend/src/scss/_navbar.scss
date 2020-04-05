@@ -1,0 +1,32 @@
+.navbar{
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+    }
+
+
+.sidebar-container{
+    width: 80%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+        &-item{
+        line-height: 32px;
+        font-size: 16px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: black;
+        transition: all .2s linear;
+        padding-right: 10px;
+        border-right: 1px solid black;
+
+        &:last-child{
+            border: 0;
+        }
+        &:hover{
+            color: $color-soft-gray;
+        }
+    }
+}
+
