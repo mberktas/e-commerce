@@ -11,5 +11,5 @@
 -http://localhost:8080 de proje çalışmaya başlamış olacaktır.
 -**Admin Paneli için** http://localhost:8080/admin
 
-- **frontend Vue ** - `:8080`
+- **vue** - `:8080`
 - **laravel api** - `:8000`
