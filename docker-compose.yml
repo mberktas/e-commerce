@@ -19,7 +19,7 @@ services:
       - laravel
 
   mysql:
-    image: mysql:5.7.29
+    image: mysql:5.7.22
     container_name: mysql
     restart: unless-stopped
     tty: true
@@ -59,14 +59,12 @@ services:
       - laravel
 
   npm:
-    image: node:13.7
+    build: 
+      context: .
+      dockerfile: ./src/frontend/Dockerfile
     container_name: npm
-    volumes:
-      - ./src:/var/www/html
-    working_dir: /var/www/html
-    entrypoint: ['npm']
-    networks:
-      - laravel
+    ports: 
+      - 8080:8080
 
   artisan:
     build:
