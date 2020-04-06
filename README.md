@@ -1,8 +1,10 @@
 
 ## Kullanımı
 
--Bu repository klonlayınız.Ardıdan terminalde klonladıgınız dosyanın kök dizininde komutları çalıştırınız.
+-Bu repository klonlayınız.
+- `https://github.com/mberktas/spa-vue-project.git`
 
+Ardıdan terminalde klonladıgınız dosyanın kök dizininde komutları çalıştırınız.
 - `docker-compose up -d --build` 
 - `docker-compose run --rm artisan migrate` 
 - `docker-compose run --rm artisan db:seed` 
