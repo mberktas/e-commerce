@@ -1,24 +1,21 @@
-# docker-compose-laravel
-A pretty simplified docker-compose workflow that sets up a LEMP network of containers for local Laravel development. You can view the full article that inspired this repo [here](https://medium.com/@aschmelyun).
 
+## Kullanımı
 
-## Usage
+-Bu repository klonlayınız.
+- `git clone https://github.com/mberktas/spa-vue-project.git`
 
-To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
+Ardıdan terminalde klonladıgınız dosyanın kök dizininde komutları çalıştırınız.
+- `docker-compose up -d --build` 
+- `docker-compose exec php php /var/www/html/artisan migrate` 
+- `docker-compose exec php php /var/www/html/artisan db:seed` 
+- `docker-compose run --rm -p 8080:8080 -e "HOST=0.0.0.0" npm run serve`
 
-First add your entire Laravel project to the `src` folder, then open a terminal and from this cloned respository's root run `docker-compose up -d --build`. Open up your browser of choice to [http://localhost:8080](http://localhost:8080) and you should see your Laravel app running as intended. **Your Laravel app needs to be in the src directory first before bringing the containers up, otherwise the artisan container will not build, as it's missing the appropriate file.** 
+-http://localhost:8080 de proje çalışmaya başlamış olacaktır.
+-**Admin Paneli için** http://localhost:8080/admin
 
-**New:** Three new containers have been added that handle Composer, NPM, and Artisan commands without having to have these platforms installed on your local computer. Use the following command templates from your project root, modifiying them to fit your particular use case:
+- **NOT** -
+- `Unhandled exception : Drive has not been shared`
+Hatası alırsanız Docker > Settings > Resources > File Sharing > (Docker ' in kurulu olduğu dizini aktif edin.)
 
-- `docker-compose run --rm composer update`
-- `docker-compose run --rm npm run dev`
-- `docker-compose run --rm artisan migrate` 
-
-Containers created and their ports (if used) are as follows:
-
-- **nginx** - `:8080`
-- **mysql** - `:3306`
-- **php** - `:9000`
-- **npm**
-- **composer**
-- **artisan**
+- **vue** - `:8080`
+- **laravel api** - `:8000`

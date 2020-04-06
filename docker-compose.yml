@@ -32,12 +32,22 @@ services:
       - php
       - laravel
 
+<<<<<<< HEAD
   frontend-vue:
     build:
       context: .
       dockerfile: "./src/frontend/Dockerfile"
     ports:
       - "8080:8080"
+=======
+  npm:
+    build: 
+      context: .
+      dockerfile: ./src/frontend/Dockerfile
+    container_name: npm
+    ports: 
+      - 8080:8080
+>>>>>>> e9bd6ee40428b3d1e33f7403a9dbba551d0f0405
 
   artisan:
     build:
