@@ -6,8 +6,8 @@
 
 Ardıdan terminalde klonladıgınız dosyanın kök dizininde komutları çalıştırınız.
 - `docker-compose up -d --build` 
-- `docker-compose run --rm artisan migrate` 
-- `docker-compose run --rm artisan db:seed` 
+- `docker-compose exec php php /var/www/html/artisan migrate` 
+- `docker-compose exec php php /var/www/html/artisan db:seed` 
 - `docker-compose run --rm -p 8080:8080 -e "HOST=0.0.0.0" npm run serve`
 
 -http://localhost:8080 de proje çalışmaya başlamış olacaktır.
