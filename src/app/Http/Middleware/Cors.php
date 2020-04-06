@@ -19,6 +19,5 @@ class Cors
         ->header('Access-Control-Allow-Origin',"*")
         ->header('Access-Control-Allow-Methods',"PUT,POST,GET,DELETE,OPTIONS")
         ->header('Access-Control-Allow-Headers',"Accept,Authorization,Content-Type");
-
     }
 }
