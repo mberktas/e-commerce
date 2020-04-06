@@ -2,7 +2,7 @@
 ## Kullanımı
 
 -Bu repository klonlayınız.
-- `https://github.com/mberktas/spa-vue-project.git`
+- `git clone https://github.com/mberktas/spa-vue-project.git`
 
 Ardıdan terminalde klonladıgınız dosyanın kök dizininde komutları çalıştırınız.
 - `docker-compose up -d --build` 
