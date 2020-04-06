@@ -1,7 +1,7 @@
 import axios from 'axios'
 import constPath from './constant.js'
 
-
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 export default{
     fetchAllProducts(){
