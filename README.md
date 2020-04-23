@@ -1,7 +1,7 @@
 
 ## Kullanımı
 
--Bu repository klonlayınız.
+- Bu repository klonlayınız.
 - `git clone https://github.com/mberktas/spa-vue-project.git`
 
 Ardıdan terminalde klonladıgınız dosyanın kök dizininde komutları çalıştırınız.
