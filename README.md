@@ -17,5 +17,5 @@ Ardıdan terminalde klonladıgınız dosyanın kök dizininde komutları çalı�
 - `Unhandled exception : Drive has not been shared`
 Hatası alırsanız Docker > Settings > Resources > File Sharing > (Docker ' in kurulu olduğu dizini aktif edin.)
 
-- **vue** - `:8080`
-- **laravel api** - `:8000`
+- **vue**  `:8080`
+- **laravel api**  `:8000`
