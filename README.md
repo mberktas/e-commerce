@@ -11,9 +11,9 @@ Ardıdan terminalde klonladıgınız dosyanın kök dizininde komutları çalı�
 
 
 -http://localhost:8080 de proje çalışmaya başlamış olacaktır.
--**Admin Paneli için** http://localhost:8080/admin
+**Admin Paneli için** http://localhost:8080/admin
 
-- **NOT** -
+- **NOT**
 - `Unhandled exception : Drive has not been shared`
 Hatası alırsanız Docker > Settings > Resources > File Sharing > (Docker ' in kurulu olduğu dizini aktif edin.)
 
